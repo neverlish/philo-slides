@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 720pt; height: 405pt; font-family: 'Pretendard', sans-serif; background: #F9F7F2; padding: 40pt 56pt; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22pt;">
+    <div style="display:flex; align-items:center; gap:10pt;">
+      <p style="padding:3pt 10pt; background:#EC5B13; color:#fff; border-radius:4pt; font-size:8pt; font-weight:700;">SECTION 05 — 인프라</p>
+      <h2 style="font-family:'Noto Serif KR',serif; font-size:20pt; font-weight:600; color:#2C2420;">인프라 — 최대한 편하게</h2>
+    </div>
+    <p style="font-size:10pt; color:#6B5F56;">18 / 20</p>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; gap:12pt;">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12pt;">
+      <div style="background:#2C2420; border-radius:10pt; padding:16pt;">
+        <p style="font-size:11pt; color:#EC5B13; font-weight:800; margin-bottom:8pt;">GitHub + Vercel</p>
+        <p style="font-size:9pt; color:#F9F7F2; line-height:1.7; margin-bottom:10pt;">git push → 자동 배포<br>PR마다 Preview URL 생성<br>롤백도 클릭 한 번</p>
+        <div style="background:#1e1916; border-radius:6pt; padding:8pt;">
+          <p style="font-size:8pt; color:#9a8a82; font-family:'Courier New',monospace;">$ git push origin main<br><span style="color:#EC5B13;">✓ Deployed to Vercel</span></p>
+        </div>
+      </div>
+
+      <div style="background:#fff; border-radius:10pt; padding:16pt; border:1px solid #e0d8d4;">
+        <p style="font-size:11pt; color:#EC5B13; font-weight:800; margin-bottom:8pt;">Supabase</p>
+        <p style="font-size:9pt; color:#2C2420; line-height:1.7; margin-bottom:10pt;">설정 최소화로 빠른 시작<br>Auth · RLS · Realtime 내장<br>마이그레이션 UI로 관리</p>
+        <div style="display:flex; flex-wrap:wrap; gap:4pt;">
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">PostgreSQL</span>
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">Auth</span>
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">RLS</span>
+        </div>
+      </div>
+
+      <div style="background:#fff; border-radius:10pt; padding:16pt; border:1px solid #e0d8d4;">
+        <p style="font-size:11pt; color:#EC5B13; font-weight:800; margin-bottom:8pt;">PostHog</p>
+        <p style="font-size:9pt; color:#2C2420; line-height:1.7; margin-bottom:10pt;">실사용자 행동 추적<br>UTM · Funnel · Session Replay<br>이터레이션 근거 확보</p>
+        <div style="display:flex; flex-wrap:wrap; gap:4pt;">
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">Events</span>
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">Funnel</span>
+          <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">Session</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#EC5B1312; border-radius:10pt; padding:14pt 20pt; display:flex; align-items:center; gap:16pt; border:1px solid #EC5B1330;">
+      <span style="font-size:24pt;">⚡</span>
+      <div>
+        <p style="font-family:'Noto Serif KR',serif; font-size:13pt; font-weight:700; color:#2C2420; margin-bottom:4pt;">"1인 개발자가 인프라에 쓸 수 있는 에너지는 적어야 한다"</p>
+        <p style="font-size:10pt; color:#6B5F56;">배포 실패 → "배포 실패함 너가 해줘" → Claude가 Vercel 로그 분석 후 해결</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

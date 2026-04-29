@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 720pt; height: 405pt; font-family: 'Pretendard', sans-serif; background: #F9F7F2; padding: 40pt 56pt; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24pt;">
+    <div style="display:flex; align-items:center; gap:10pt;">
+      <p style="padding:3pt 10pt; background:#EC5B13; color:#fff; border-radius:4pt; font-size:8pt; font-weight:700;">SECTION 04 — 개발</p>
+      <h2 style="font-family:'Noto Serif KR',serif; font-size:20pt; font-weight:600; color:#2C2420;">개발 — 기술 스택</h2>
+    </div>
+    <p style="font-size:10pt; color:#6B5F56;">11 / 20</p>
+  </div>
+
+  <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:20pt;">
+    <div>
+      <p style="font-size:9pt; color:#6B5F56; font-weight:600; letter-spacing:0.08em; margin-bottom:10pt;">TECH STACK</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8pt;">
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">Framework</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">Next.js 15</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">App Router · TypeScript</p>
+        </div>
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">UI</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">shadcn/ui</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">+ Tailwind CSS</p>
+        </div>
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">Animation</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">Framer Motion</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">페이지 전환 · 파티클</p>
+        </div>
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">AI</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">Claude API</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">처방 생성 · 매칭</p>
+        </div>
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">DB</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">Supabase</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">PostgreSQL · Auth</p>
+        </div>
+        <div style="background:#fff; border-radius:8pt; padding:12pt;">
+          <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:4pt;">PWA</p>
+          <p style="font-size:13pt; font-weight:800; color:#2C2420;">Web Push</p>
+          <p style="font-size:8pt; color:#6B5F56; margin-top:2pt;">Service Worker</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:10pt;">
+      <p style="font-size:9pt; color:#6B5F56; font-weight:600; letter-spacing:0.08em;">개발 방식</p>
+      <div style="background:#2C2420; border-radius:12pt; padding:18pt; flex:1;">
+        <div style="display:flex; flex-direction:column; gap:12pt;">
+          <div style="display:flex; gap:10pt;">
+            <span style="color:#EC5B13; font-size:16pt; min-width:20pt; font-weight:800;">1</span>
+            <p style="font-size:10pt; color:#F9F7F2; line-height:1.6;">Stitch 디자인 → Claude에게 구현 지시 (Implementation Plan)</p>
+          </div>
+          <div style="display:flex; gap:10pt;">
+            <span style="color:#EC5B13; font-size:16pt; min-width:20pt; font-weight:800;">2</span>
+            <p style="font-size:10pt; color:#F9F7F2; line-height:1.6;">기능 완성 → PostHog로 사용자 반응 확인 → 피드백 반영</p>
+          </div>
+          <div style="display:flex; gap:10pt;">
+            <span style="color:#EC5B13; font-size:16pt; min-width:20pt; font-weight:800;">3</span>
+            <p style="font-size:10pt; color:#F9F7F2; line-height:1.6;">막히면 Claude에게 원인 분석 + 해결 요청</p>
+          </div>
+          <div style="display:flex; gap:10pt;">
+            <span style="color:#EC5B13; font-size:16pt; min-width:20pt; font-weight:800;">4</span>
+            <p style="font-size:10pt; color:#F9F7F2; line-height:1.6;">git push → Vercel 자동 배포 반복</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

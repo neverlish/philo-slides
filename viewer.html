@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: sans-serif; overflow: hidden; }
+
+    #slide-container {
+      position: relative;
+      width: 720pt;
+      height: 405pt;
+      transform-origin: center center;
+    }
+
+    #slide-frame {
+      width: 720pt;
+      height: 405pt;
+      border: none;
+      display: block;
+    }
+
+    #controls {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 13px;
+      user-select: none;
+    }
+
+    #controls button {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    #controls button:hover { background: rgba(255,255,255,0.1); }
+    #controls button:disabled { opacity: 0.3; cursor: default; }
+
+    #slide-info { min-width: 60px; text-align: center; color: #aaa; }
+  </style>
+</head>
+<body>
+  <div id="slide-container">
+    <iframe id="slide-frame" src=""></iframe>
+  </div>
+
+  <div id="controls">
+    <button id="btn-prev" onclick="prev()">← 이전</button>
+    <span id="slide-info"></span>
+    <button id="btn-next" onclick="next()">다음 →</button>
+  </div>
+
+  <script>
+    const slides = [
+      'slide-01-cover.html',
+      'slide-02-contents.html',
+      'slide-03-problem.html',
+      'slide-04-intro.html',
+      'slide-05-user-journey.html',
+      'slide-06-planning.html',
+      'slide-07-planning-prompts.html',
+      'slide-08-planning-docs.html',
+      'slide-09-design.html',
+      'slide-10-stitch-gallery.html',
+      'slide-11-dev.html',
+      'slide-12-dev-arch.html',
+      'slide-13-dev-prompts.html',
+      'slide-13a-claude-md.html',
+      'slide-13b-mcp.html',
+      'slide-13c-permissions.html',
+      'slide-14-key-features.html',
+      'slide-15-infra.html',
+      'slide-16-cicd.html',
+      'slide-20-lessons.html',
+    ];
+
+    let current = 0;
+
+    function scaleToFit() {
+      const container = document.getElementById('slide-container');
+      const scaleX = window.innerWidth / (720 * 1.333);
+      const scaleY = (window.innerHeight - 80) / (405 * 1.333);
+      const scale = Math.min(scaleX, scaleY);
+      container.style.transform = `scale(${scale})`;
+    }
+
+    function go(index) {
+      if (index < 0 || index >= slides.length) return;
+      current = index;
+      document.getElementById('slide-frame').src = slides[current];
+      document.getElementById('slide-info').textContent = `${current + 1} / ${slides.length}`;
+      document.getElementById('btn-prev').disabled = current === 0;
+      document.getElementById('btn-next').disabled = current === slides.length - 1;
+    }
+
+    function prev() { go(current - 1); }
+    function next() { go(current + 1); }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next();
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prev();
+    });
+
+    window.addEventListener('resize', scaleToFit);
+    scaleToFit();
+    go(0);
+  </script>
+</body>
+</html>

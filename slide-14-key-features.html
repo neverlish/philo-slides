@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 720pt; height: 405pt; font-family: 'Pretendard', sans-serif; background: #F9F7F2; padding: 40pt 56pt; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22pt;">
+    <div style="display:flex; align-items:center; gap:10pt;">
+      <p style="padding:3pt 10pt; background:#EC5B13; color:#fff; border-radius:4pt; font-size:8pt; font-weight:700;">SECTION 04 — 개발</p>
+      <h2 style="font-family:'Noto Serif KR',serif; font-size:20pt; font-weight:600; color:#2C2420;">주요 기능 하이라이트</h2>
+    </div>
+    <p style="font-size:10pt; color:#6B5F56;">17 / 20</p>
+  </div>
+
+  <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:16pt;">
+    <!-- 오늘의 처방 -->
+    <div style="background:#2C2420; border-radius:12pt; padding:18pt; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-10pt; right:-10pt; width:60pt; height:60pt; background:#EC5B13; border-radius:50%; opacity:0.15;"></div>
+      <p style="font-size:9pt; color:#EC5B13; font-weight:700; letter-spacing:0.1em; margin-bottom:10pt;">FEATURE 01</p>
+      <p style="font-family:'Noto Serif KR',serif; font-size:16pt; font-weight:700; color:#F9F7F2; margin-bottom:8pt;">오늘의 처방</p>
+      <p style="font-size:10pt; color:#9a8a82; line-height:1.7; margin-bottom:12pt;">고민을 입력하면 Claude API가 맞는 철학자와 명언을 매칭. 의미 해석 + 실천 방법까지 함께 제공</p>
+      <div style="display:flex; gap:6pt; flex-wrap:wrap;">
+        <span style="padding:3pt 8pt; background:#3d3430; border-radius:4pt; font-size:8pt; color:#9a8a82;">Claude API</span>
+        <span style="padding:3pt 8pt; background:#3d3430; border-radius:4pt; font-size:8pt; color:#9a8a82;">매일 1회</span>
+        <span style="padding:3pt 8pt; background:#3d3430; border-radius:4pt; font-size:8pt; color:#9a8a82;">저장 · 공유</span>
+      </div>
+    </div>
+
+    <!-- 철학자 유형 퀴즈 -->
+    <div style="background:#fff; border-radius:12pt; padding:18pt; border:1px solid #e0d8d4; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-10pt; right:-10pt; width:60pt; height:60pt; background:#EC5B13; border-radius:50%; opacity:0.08;"></div>
+      <p style="font-size:9pt; color:#EC5B13; font-weight:700; letter-spacing:0.1em; margin-bottom:10pt;">FEATURE 02</p>
+      <p style="font-family:'Noto Serif KR',serif; font-size:16pt; font-weight:700; color:#2C2420; margin-bottom:8pt;">철학자 유형 퀴즈</p>
+      <p style="font-size:10pt; color:#6B5F56; line-height:1.7; margin-bottom:12pt;">MBTI처럼 질문에 답하면 나와 닮은 철학자 결과 제공. 바이럴 유입용 랜딩 기능</p>
+      <div style="display:flex; gap:6pt; flex-wrap:wrap;">
+        <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">Stitch 디자인</span>
+        <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">공유 유도</span>
+        <span style="padding:3pt 8pt; background:#F9F7F2; border-radius:4pt; font-size:8pt; color:#6B5F56;">/type 라우트</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10pt; margin-top:12pt;">
+    <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; display:flex; gap:8pt; align-items:center;">
+      <span style="font-size:16pt;">🔔</span>
+      <div><p style="font-size:9pt; font-weight:700; color:#2C2420;">웹푸시 알림</p><p style="font-size:8pt; color:#6B5F56;">PWA · Service Worker</p></div>
+    </div>
+    <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; display:flex; gap:8pt; align-items:center;">
+      <span style="font-size:16pt;">💾</span>
+      <div><p style="font-size:9pt; font-weight:700; color:#2C2420;">처방 저장 · 여정</p><p style="font-size:8pt; color:#6B5F56;">연속성 · 성장 느낌</p></div>
+    </div>
+    <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; display:flex; gap:8pt; align-items:center;">
+      <span style="font-size:16pt;">🔗</span>
+      <div><p style="font-size:9pt; font-weight:700; color:#2C2420;">공개 API</p><p style="font-size:8pt; color:#6B5F56;">철학 처방 curl 엔드포인트</p></div>
+    </div>
+  </div>
+</body>
+</html>

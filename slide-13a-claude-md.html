@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 720pt; height: 405pt; font-family: 'Pretendard', sans-serif; background: #F9F7F2; padding: 40pt 56pt; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20pt;">
+    <div style="display:flex; align-items:center; gap:10pt;">
+      <p style="padding:3pt 10pt; background:#EC5B13; color:#fff; border-radius:4pt; font-size:8pt; font-weight:700;">SECTION 04 — 개발</p>
+      <h2 style="font-family:'Noto Serif KR',serif; font-size:20pt; font-weight:600; color:#2C2420;">CLAUDE.md — 규칙집을 만든다</h2>
+    </div>
+    <p style="font-size:10pt; color:#6B5F56;">14 / 20</p>
+  </div>
+
+  <div style="flex:1; display:grid; grid-template-columns:1.1fr 0.9fr; gap:16pt;">
+    <!-- 왼쪽: 실제 CLAUDE.md -->
+    <div style="background:#2C2420; border-radius:12pt; padding:16pt 18pt; font-family:'Courier New',monospace; overflow:hidden;">
+      <p style="font-size:8pt; color:#EC5B13; margin-bottom:10pt; font-family:'Pretendard',sans-serif; font-weight:700;">CLAUDE.md</p>
+      <div style="font-size:8pt; line-height:1.75; color:#9a8a82;">
+        <p style="color:#6B5F56; margin-bottom:4pt;">## 커밋 & 푸시</p>
+        <p style="color:#F9F7F2;">작업 완료 시 <span style="color:#EC5B13;">자동으로 커밋 + push</span></p>
+        <p style="color:#F9F7F2;">커밋 메시지는 한국어, feat/fix/improve</p>
+        <br>
+        <p style="color:#6B5F56; margin-bottom:4pt;">## 새 기능 체크리스트</p>
+        <p style="color:#F9F7F2;">1. <span style="color:#EC5B13;">PostHog 이벤트</span> 항상 포함</p>
+        <p style="color:#9a8a82;">   *_viewed / *_clicked / *_completed</p>
+        <p style="color:#F9F7F2;">2. 뒤로가기 버튼 항상 포함</p>
+        <p style="color:#F9F7F2;">3. 비로그인 → 회원가입 유도</p>
+        <br>
+        <p style="color:#6B5F56; margin-bottom:4pt;">## 날짜 처리</p>
+        <p style="color:#9a8a82; text-decoration:line-through;">new Date().toISOString() ← 사용 금지</p>
+        <p style="color:#EC5B13;">getTodayKST() ← 항상 이걸로</p>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 규칙이 생긴 이유 -->
+    <div style="display:flex; flex-direction:column; gap:8pt;">
+      <p style="font-size:9pt; color:#6B5F56; font-weight:600; letter-spacing:0.08em; margin-bottom:2pt;">규칙이 생긴 이유</p>
+
+      <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; border-left:3pt solid #EC5B13;">
+        <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:3pt;">날짜 버그 경험 후</p>
+        <p style="font-size:9pt; color:#2C2420; line-height:1.6;">UTC 기준 toISOString()으로 새벽에 어제 날짜가 나오는 버그 → 규칙으로 등록</p>
+      </div>
+
+      <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; border-left:3pt solid #6B5F56;">
+        <p style="font-size:8pt; color:#6B5F56; font-weight:700; margin-bottom:3pt;">매번 말하기 귀찮아서</p>
+        <p style="font-size:9pt; color:#2C2420; line-height:1.6;">"커밋도 해줘" 반복 요청 → 자동으로 커밋+push하는 규칙으로</p>
+      </div>
+
+      <div style="background:#fff; border-radius:8pt; padding:10pt 12pt; border-left:3pt solid #6B5F56;">
+        <p style="font-size:8pt; color:#6B5F56; font-weight:700; margin-bottom:3pt;">놓치기 쉬운 것들</p>
+        <p style="font-size:9pt; color:#2C2420; line-height:1.6;">PostHog 이벤트, 뒤로가기 버튼 — 체크리스트로 박아두니 자동으로 포함</p>
+      </div>
+
+      <div style="background:#EC5B1312; border-radius:8pt; padding:10pt 12pt; border:1px solid #EC5B1330;">
+        <p style="font-family:'Noto Serif KR',serif; font-size:10pt; color:#2C2420; line-height:1.6;">"버그를 고치는 게 아니라<br>다시는 안 만들게 규칙을 짠다"</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 720pt; height: 405pt; font-family: 'Pretendard', sans-serif; background: #2C2420; padding: 40pt 56pt; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20pt;">
+    <div style="display:flex; align-items:center; gap:10pt;">
+      <p style="padding:3pt 10pt; background:#EC5B13; color:#fff; border-radius:4pt; font-size:8pt; font-weight:700;">SECTION 04 — 개발</p>
+      <h2 style="font-family:'Noto Serif KR',serif; font-size:20pt; font-weight:600; color:#F9F7F2;">MCP — Claude가 직접 DB에 손 댄다</h2>
+    </div>
+    <p style="font-size:10pt; color:#6B5F56;">15 / 20</p>
+  </div>
+
+  <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:16pt;">
+    <!-- 왼쪽: Before / After -->
+    <div style="display:flex; flex-direction:column; gap:10pt;">
+      <div style="background:#3d3430; border-radius:10pt; padding:14pt 16pt;">
+        <p style="font-size:8pt; color:#9a8a82; font-weight:700; margin-bottom:8pt;">BEFORE — MCP 없이</p>
+        <div style="font-size:9pt; color:#9a8a82; line-height:1.8; font-family:'Courier New',monospace;">
+          <p>나: "users 테이블에 streak 컬럼 추가해줘"</p>
+          <p style="color:#6B5F56;">Claude: "SQL 써드릴게요 👇"</p>
+          <p style="color:#6B5F56;">ALTER TABLE users ADD COLUMN...</p>
+          <p>나: 터미널 켜고</p>
+          <p>나: Supabase 대시보드 열고</p>
+          <p>나: SQL 복사 붙여넣기</p>
+          <p>나: 실행 확인 후 돌아옴</p>
+        </div>
+      </div>
+
+      <div style="background:#1e1916; border-radius:10pt; padding:14pt 16pt; border:1px solid #EC5B1340;">
+        <p style="font-size:8pt; color:#EC5B13; font-weight:700; margin-bottom:8pt;">AFTER — Supabase MCP 연결</p>
+        <div style="font-size:9pt; line-height:1.8; font-family:'Courier New',monospace;">
+          <p style="color:#F9F7F2;">나: "users 테이블에 streak 컬럼 추가해줘"</p>
+          <p style="color:#EC5B13;">Claude: [execute_sql] ← 직접 실행</p>
+          <p style="color:#EC5B13;">Claude: [apply_migration] ← 마이그레이션까지</p>
+          <p style="color:#9a8a82;">Claude: "완료. 타입도 재생성할까요?"</p>
+          <p style="color:#F9F7F2;">나: "응"</p>
+          <p style="color:#EC5B13;">Claude: [generate_typescript_types]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 연결된 MCP들 -->
+    <div style="display:flex; flex-direction:column; gap:10pt;">
+      <p style="font-size:9pt; color:#6B5F56; font-weight:600; letter-spacing:0.08em; margin-bottom:2pt;">연결한 MCP 서버들</p>
+
+      <div style="background:#3d3430; border-radius:10pt; padding:14pt 16pt;">
+        <div style="display:flex; align-items:center; gap:10pt; margin-bottom:8pt;">
+          <span style="font-size:16pt;">🗄️</span>
+          <div>
+            <p style="font-size:10pt; font-weight:700; color:#F9F7F2;">Supabase MCP</p>
+            <p style="font-size:8pt; color:#9a8a82;">DB 직접 조작</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:4pt;">
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#EC5B13;">execute_sql</span>
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#9a8a82;">apply_migration</span>
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#9a8a82;">generate_typescript_types</span>
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#9a8a82;">list_tables</span>
+        </div>
+      </div>
+
+      <div style="background:#3d3430; border-radius:10pt; padding:14pt 16pt;">
+        <div style="display:flex; align-items:center; gap:10pt; margin-bottom:8pt;">
+          <span style="font-size:16pt;">🎨</span>
+          <div>
+            <p style="font-size:10pt; font-weight:700; color:#F9F7F2;">Stitch MCP</p>
+            <p style="font-size:8pt; color:#9a8a82;">디자인 → 코드 직접 변환</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:4pt;">
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#EC5B13;">get_screen</span>
+          <span style="padding:3pt 7pt; background:#2C2420; border-radius:4pt; font-size:8pt; color:#9a8a82;">list_projects</span>
+        </div>
+      </div>
+
+      <div style="background:#EC5B1315; border-radius:8pt; padding:10pt 14pt; border:1px solid #EC5B1340;">
+        <p style="font-family:'Noto Serif KR',serif; font-size:10pt; color:#F9F7F2; line-height:1.6;">컨텍스트 스위칭이 없어지면<br>흐름이 끊기지 않는다</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
